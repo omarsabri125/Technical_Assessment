@@ -1,0 +1,213 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "mode": "quantized",
+  "precision": {
+    "label": "4-bit NF4 / BFLOAT16 compute",
+    "weight_precision": "4-bit NF4",
+    "compute_dtype": "BFLOAT16",
+    "quantization": "bitsandbytes NF4 + double quantization"
+  },
+  "methodology": {
+    "fixed_prompt_count": 5,
+    "max_new_tokens": 160,
+    "decoding": "greedy / deterministic (do_sample=False)",
+    "use_kv_cache": true,
+    "warmup": true,
+    "throughput_scope": "prefill + decoding; tokenization excluded",
+    "seed": 42
+  },
+  "hardware": {
+    "gpu": "Tesla T4",
+    "gpu_total_memory_gib": 14.5632,
+    "compute_capability": "7.5",
+    "cuda_runtime": "12.8",
+    "pytorch": "2.11.0+cu128",
+    "python": "3.12.13",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35"
+  },
+  "memory": {
+    "model_footprint_gib": 1.0451,
+    "process_ram_before_load_gib": 0.8248,
+    "process_ram_after_load_gib": 1.1334,
+    "process_ram_after_warmup_gib": 1.56,
+    "process_ram_load_delta_gib": 0.3086,
+    "vram_before_load_gib": 0.0,
+    "vram_after_load_gib": 1.0741,
+    "vram_after_warmup_gib": 1.0831,
+    "peak_vram_during_load_gib": 1.0987,
+    "peak_vram_during_inference_gib": 1.1178
+  },
+  "performance": {
+    "load_seconds": 9.7845,
+    "total_generated_tokens": 453,
+    "total_generation_seconds": 32.205962,
+    "weighted_tokens_per_second": 14.0657,
+    "mean_prompt_tokens_per_second": 13.9602
+  },
+  "quality": {
+    "mean_automatic_compliance_score": 80.0,
+    "warning": "Automatic checks measure format/task compliance only. Read the five outputs side by side for qualitative judgment."
+  },
+  "prompts": [
+    {
+      "id": "math_reasoning",
+      "prompt": "A warehouse has 240 boxes. It ships 35% of them, then receives 18 new boxes. Show the calculation briefly and finish with exactly 'FINAL: <number>'.",
+      "output": "The number of boxes shipped is calculated as follows:\n\\[ \\text{Number of boxes shipped} = 240 \\times 0.35 = 84 \\]\n\nAfter shipping, the remaining boxes in the warehouse are:\n\\[ \\text{Remaining boxes} = 240 - 84 = 156 \\]\n\nThen, after receiving 18 new boxes, the final count is:\n\\[ \\text{Final count} = 156 + 18 = 174 \\]\n\nFINAL: 174.",
+      "input_tokens": 74,
+      "generated_tokens": 117,
+      "elapsed_seconds": 8.444574,
+      "tokens_per_second": 13.8551,
+      "vram_allocated_before_gib": 1.0831,
+      "vram_allocated_after_gib": 1.0831,
+      "peak_vram_total_gib": 1.1145,
+      "peak_vram_increment_gib": 0.0315,
+      "automatic_compliance_score": 100.0,
+      "checks": [
+        {
+          "criterion": "Contains the required FINAL label",
+          "passed": true
+        },
+        {
+          "criterion": "Shows subtraction/shipping calculation",
+          "passed": true
+        },
+        {
+          "criterion": "Final answer is correct",
+          "passed": true
+        },
+        {
+          "criterion": "Avoids a conflicting final number",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "json_extraction",
+      "prompt": "Extract the following text into valid JSON only, with exactly these keys: name, city, product, price_usd, purchase_date.\nText: Nora lives in Cairo. She bought a laptop for 1250 US dollars on 12 March 2025.",
+      "output": "```json\n[\n    {\n        \"name\": \"Nora\",\n        \"city\": \"Cairo\",\n        \"product\": \"laptop\",\n        \"price_usd\": 1250,\n        \"purchase_date\": \"12 March 2025\"\n    }\n]\n```",
+      "input_tokens": 91,
+      "generated_tokens": 62,
+      "elapsed_seconds": 4.126841,
+      "tokens_per_second": 15.0236,
+      "vram_allocated_before_gib": 1.0831,
+      "vram_allocated_after_gib": 1.0831,
+      "peak_vram_total_gib": 1.1154,
+      "peak_vram_increment_gib": 0.0324,
+      "automatic_compliance_score": 100.0,
+      "checks": [
+        {
+          "criterion": "Output contains parseable JSON",
+          "passed": true
+        },
+        {
+          "criterion": "Uses exactly the requested keys",
+          "passed": true
+        },
+        {
+          "criterion": "Extracts Nora, Cairo, and laptop",
+          "passed": true
+        },
+        {
+          "criterion": "Extracts price and date",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "coding",
+      "prompt": "Write only a Python function named chunk_list(items, size). It must return consecutive chunks as lists, use no imports, and raise ValueError when size <= 0.",
+      "output": "```python\ndef chunk_list(items, size):\n    if size <= 0:\n        raise ValueError(\"Size must be greater than zero\")\n    \n    return [items[i:i + size] for i in range(0, len(items), size)]\n\n# Example usage:\nchunks = chunk_list([1, 2, 3, 4, 5], 2)\nprint(chunks)  # Output: [[1, 2], [3, 4], [5]]\n```",
+      "input_tokens": 67,
+      "generated_tokens": 101,
+      "elapsed_seconds": 7.411846,
+      "tokens_per_second": 13.6268,
+      "vram_allocated_before_gib": 1.0831,
+      "vram_allocated_after_gib": 1.0831,
+      "peak_vram_total_gib": 1.1141,
+      "peak_vram_increment_gib": 0.0311,
+      "automatic_compliance_score": 100.0,
+      "checks": [
+        {
+          "criterion": "Defines chunk_list",
+          "passed": true
+        },
+        {
+          "criterion": "Raises ValueError",
+          "passed": true
+        },
+        {
+          "criterion": "Checks size <= 0",
+          "passed": true
+        },
+        {
+          "criterion": "Builds consecutive slices",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "rag_explanation",
+      "prompt": "Explain retrieval-augmented generation (RAG) to a 12-year-old in at most 80 words. Include one simple analogy and explain both the retrieval step and the answer-generation step.",
+      "output": "Retrieval-Augmented Generation (RAG) is like using a magical book of answers to help you write stories or solve problems. Imagine you're trying to find a specific fact about dinosaurs, but instead of searching through books yourself, you ask your magical book for help. The book then quickly finds the right dinosaur facts from its vast library and gives them back to you. Then, you use those facts to create or solve something related, just like how you would use the found facts to build a story or figure out an equation. It's like having a super-smart friend who knows all the answers!",
+      "input_tokens": 76,
+      "generated_tokens": 123,
+      "elapsed_seconds": 8.083347,
+      "tokens_per_second": 15.2165,
+      "vram_allocated_before_gib": 1.0831,
+      "vram_allocated_after_gib": 1.0831,
+      "peak_vram_total_gib": 1.1146,
+      "peak_vram_increment_gib": 0.0316,
+      "automatic_compliance_score": 75.0,
+      "checks": [
+        {
+          "criterion": "At most 80 words",
+          "passed": false
+        },
+        {
+          "criterion": "Includes an analogy",
+          "passed": true
+        },
+        {
+          "criterion": "Explains retrieval",
+          "passed": true
+        },
+        {
+          "criterion": "Explains answer generation",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "quantization_summary",
+      "prompt": "Summarize the paragraph below in exactly 3 bullet points, each under 18 words. Preserve the ideas of memory, speed, and quality.\n\nQuantization stores model weights with fewer bits. This usually reduces memory use and can make deployment possible on smaller devices. Speed may improve, remain similar, or even decrease depending on hardware and kernel overhead. Very aggressive quantization can slightly reduce output quality, especially on difficult reasoning tasks.",
+      "output": "- Quantization reduces model size by using fewer bits.\n- It improves deployment efficiency on small devices.\n- Speed might increase but could also decrease based on hardware and kernel overhead.\n- Aggressive quantization can slightly lower output quality for complex tasks.",
+      "input_tokens": 121,
+      "generated_tokens": 50,
+      "elapsed_seconds": 4.139354,
+      "tokens_per_second": 12.0792,
+      "vram_allocated_before_gib": 1.0831,
+      "vram_allocated_after_gib": 1.0831,
+      "peak_vram_total_gib": 1.1178,
+      "peak_vram_increment_gib": 0.0347,
+      "automatic_compliance_score": 25.0,
+      "checks": [
+        {
+          "criterion": "Has exactly 3 bullet points",
+          "passed": false
+        },
+        {
+          "criterion": "Every bullet is under 18 words",
+          "passed": false
+        },
+        {
+          "criterion": "Mentions memory",
+          "passed": false
+        },
+        {
+          "criterion": "Preserves speed and quality ideas",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

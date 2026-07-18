@@ -1,0 +1,3 @@
+MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"
+MAX_NEW_TOKENS = 160
+SEED = 42

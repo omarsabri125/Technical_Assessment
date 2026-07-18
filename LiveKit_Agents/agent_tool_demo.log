@@ -1,0 +1,268 @@
+2026-07-18 20:32:27,039 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 20:32:27,057 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-18 20:32:27,059 | INFO | livekit.agents | starting worker
+2026-07-18 20:32:27,062 | INFO | livekit.agents | plugin registered
+2026-07-18 20:32:27,065 | INFO | livekit.agents | plugin registered
+2026-07-18 20:32:27,086 | INFO | livekit.agents | HTTP server listening on :50832
+2026-07-18 20:32:27,102 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-18 20:32:27,129 | INFO | livekit.agents | initializing job runner
+2026-07-18 20:32:27,131 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 20:32:27,131 | INFO | livekit.agents | job runner initialized
+2026-07-18 20:32:27,226 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-18 20:32:27,242 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-18 20:32:27,275 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-18 20:32:27,310 | DEBUG | livekit.agents | using audio io: (none) -> `AgentSession` -> (none)
+2026-07-18 20:32:27,316 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> (none)
+2026-07-18 20:32:27,319 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-18 20:32:29,058 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:32:29,472 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-18 20:32:29,490 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-18 20:32:31,828 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:32:32,401 | WARNING | livekit.agents | failed to generate LLM completion: Connection error., retrying in 0.1s
+2026-07-18 20:32:33,056 | DEBUG | livekit.agents | executing tool
+2026-07-18 20:32:33,060 | INFO | research-agent | [TOOL CALL] search_web(query=latest AI news today)
+2026-07-18 20:32:36,422 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-18 20:32:36,435 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 20:32:37,358 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:39:54,490 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 20:39:54,507 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-18 20:39:54,512 | INFO | livekit.agents | starting worker
+2026-07-18 20:39:54,516 | INFO | livekit.agents | plugin registered
+2026-07-18 20:39:54,516 | INFO | livekit.agents | plugin registered
+2026-07-18 20:39:54,524 | INFO | livekit.agents | HTTP server listening on :61038
+2026-07-18 20:39:54,540 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-18 20:39:54,565 | INFO | livekit.agents | initializing job runner
+2026-07-18 20:39:54,568 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 20:39:54,568 | INFO | livekit.agents | job runner initialized
+2026-07-18 20:39:54,627 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-18 20:39:54,650 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-18 20:39:54,668 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-18 20:39:54,702 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-18 20:39:54,710 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-18 20:39:54,713 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-18 20:39:56,538 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-18 20:39:56,558 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-18 20:39:57,006 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-18 20:39:58,981 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-18 20:40:08,510 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:40:13,394 | DEBUG | livekit.agents | received user transcript
+2026-07-18 20:40:13,549 | DEBUG | livekit.agents | eot prediction
+2026-07-18 20:40:13,706 | DEBUG | livekit.agents | user turn committed
+2026-07-18 20:40:13,712 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 20:40:13,719 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:40:13,930 | DEBUG | livekit.agents | executing tool
+2026-07-18 20:40:13,951 | INFO | research-agent | [TOOL CALL] search_web(query=latest news on artificial intelligence)
+2026-07-18 20:40:14,505 | ERROR | research-agent | [TOOL ERROR] Web search failed for query: latest news on artificial intelligence
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 41, in search
+    response = await self._client.search(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 286, in search
+    response_dict = await self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 258, in _search
+    self._handle_error_response(response)
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 167, in _handle_error_response
+    raise InvalidAPIKeyError(detail)
+tavily.errors.InvalidAPIKeyError: Unauthorized: missing or invalid API key.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 85, in search_web
+    results = await self._web_search_service.search(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 49, in search
+    raise WebSearchError(
+src.tools.web_search_tool.WebSearchError: The web search service is currently unavailable.
+2026-07-18 20:40:14,516 | WARNING | livekit.agents | ToolError while executing tool: The live web search service is temporarily unavailable. Tell the user that the search could not be completed and ask them to try again later. Do not answer the original question from memory. Do not guess or invent search results.
+2026-07-18 20:40:14,521 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 20:40:14,891 | DEBUG | livekit.agents | executing tool
+2026-07-18 20:40:14,917 | INFO | research-agent | [TOOL CALL] search_web(query=latest artificial intelligence updates)
+2026-07-18 20:40:15,091 | ERROR | research-agent | [TOOL ERROR] Web search failed for query: latest artificial intelligence updates
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 41, in search
+    response = await self._client.search(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 286, in search
+    response_dict = await self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 258, in _search
+    self._handle_error_response(response)
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 167, in _handle_error_response
+    raise InvalidAPIKeyError(detail)
+tavily.errors.InvalidAPIKeyError: Unauthorized: missing or invalid API key.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 85, in search_web
+    results = await self._web_search_service.search(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 49, in search
+    raise WebSearchError(
+src.tools.web_search_tool.WebSearchError: The web search service is currently unavailable.
+2026-07-18 20:40:15,116 | WARNING | livekit.agents | ToolError while executing tool: The live web search service is temporarily unavailable. Tell the user that the search could not be completed and ask them to try again later. Do not answer the original question from memory. Do not guess or invent search results.
+2026-07-18 20:40:15,121 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 20:40:20,610 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:40:50,183 | DEBUG | livekit.agents | received user transcript
+2026-07-18 20:40:50,368 | DEBUG | livekit.agents | eot prediction
+2026-07-18 20:40:50,499 | DEBUG | livekit.agents | user turn committed
+2026-07-18 20:40:50,511 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 20:40:50,521 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:40:50,530 | DEBUG | livekit.agents | executing tool
+2026-07-18 20:40:50,538 | INFO | research-agent | [TOOL CALL] search_web(query=machine learning latest developments)
+2026-07-18 20:40:51,016 | ERROR | research-agent | [TOOL ERROR] Web search failed for query: machine learning latest developments
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 41, in search
+    response = await self._client.search(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 286, in search
+    response_dict = await self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 258, in _search
+    self._handle_error_response(response)
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 167, in _handle_error_response
+    raise InvalidAPIKeyError(detail)
+tavily.errors.InvalidAPIKeyError: Unauthorized: missing or invalid API key.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 85, in search_web
+    results = await self._web_search_service.search(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 49, in search
+    raise WebSearchError(
+src.tools.web_search_tool.WebSearchError: The web search service is currently unavailable.
+2026-07-18 20:40:51,029 | WARNING | livekit.agents | ToolError while executing tool: The live web search service is temporarily unavailable. Tell the user that the search could not be completed and ask them to try again later. Do not answer the original question from memory. Do not guess or invent search results.
+2026-07-18 20:40:51,035 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 20:40:51,400 | DEBUG | livekit.agents | executing tool
+2026-07-18 20:40:51,414 | INFO | research-agent | [TOOL CALL] search_web(query=current machine learning trends)
+2026-07-18 20:40:51,604 | ERROR | research-agent | [TOOL ERROR] Web search failed for query: current machine learning trends
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 41, in search
+    response = await self._client.search(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 286, in search
+    response_dict = await self._search(query,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 258, in _search
+    self._handle_error_response(response)
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\tavily\async_tavily.py", line 167, in _handle_error_response
+    raise InvalidAPIKeyError(detail)
+tavily.errors.InvalidAPIKeyError: Unauthorized: missing or invalid API key.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 85, in search_web
+    results = await self._web_search_service.search(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\LiveKit_Agents\src\tools\web_search_tool.py", line 49, in search
+    raise WebSearchError(
+src.tools.web_search_tool.WebSearchError: The web search service is currently unavailable.
+2026-07-18 20:40:51,612 | WARNING | livekit.agents | ToolError while executing tool: The live web search service is temporarily unavailable. Tell the user that the search could not be completed and ask them to try again later. Do not answer the original question from memory. Do not guess or invent search results.
+2026-07-18 20:40:51,622 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 20:40:57,715 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 20:41:02,596 | INFO | livekit.agents | shutting down worker
+2026-07-18 20:41:02,718 | DEBUG | livekit.agents | session closed
+2026-07-18 20:41:02,723 | DEBUG | livekit.agents | shutting down job task
+2026-07-18 20:41:02,729 | DEBUG | livekit.agents | job exiting
+2026-07-18 20:41:02,733 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-18 21:41:44,401 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 21:41:44,401 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-18 21:41:44,420 | INFO | livekit.agents | starting worker
+2026-07-18 21:41:44,421 | INFO | livekit.agents | plugin registered
+2026-07-18 21:41:44,423 | INFO | livekit.agents | plugin registered
+2026-07-18 21:41:44,432 | INFO | livekit.agents | HTTP server listening on :54191
+2026-07-18 21:41:44,451 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-18 21:41:44,468 | INFO | livekit.agents | initializing job runner
+2026-07-18 21:41:44,470 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 21:41:44,470 | INFO | livekit.agents | job runner initialized
+2026-07-18 21:41:44,514 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-18 21:41:44,533 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-18 21:41:44,539 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-18 21:41:44,565 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-18 21:41:44,565 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-18 21:41:44,565 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-18 21:41:46,437 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-18 21:41:46,441 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-18 21:41:46,908 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-18 21:41:48,886 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-18 21:41:55,309 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:42:00,414 | DEBUG | livekit.agents | received user transcript
+2026-07-18 21:42:00,575 | DEBUG | livekit.agents | eot prediction
+2026-07-18 21:42:00,708 | DEBUG | livekit.agents | user turn committed
+2026-07-18 21:42:00,712 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 21:42:00,716 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:42:00,795 | DEBUG | livekit.agents | executing tool
+2026-07-18 21:42:00,801 | INFO | research-agent | [TOOL CALL] search_web(query=معالجة اللغات الطبيعية)
+2026-07-18 21:42:02,756 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-18 21:42:02,760 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 21:42:27,310 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:42:33,105 | DEBUG | livekit.agents | received user transcript
+2026-07-18 21:42:33,171 | DEBUG | livekit.agents | eot prediction
+2026-07-18 21:42:33,383 | DEBUG | livekit.agents | user turn committed
+2026-07-18 21:42:33,392 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 21:42:33,400 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:42:40,309 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:43:00,731 | INFO | livekit.agents | shutting down worker
+2026-07-18 21:43:00,849 | DEBUG | livekit.agents | session closed
+2026-07-18 21:43:00,856 | DEBUG | livekit.agents | shutting down job task
+2026-07-18 21:43:00,860 | DEBUG | livekit.agents | job exiting
+2026-07-18 21:43:00,863 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-18 21:57:06,630 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 21:57:06,643 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-18 21:57:06,645 | INFO | livekit.agents | starting worker
+2026-07-18 21:57:06,645 | INFO | livekit.agents | plugin registered
+2026-07-18 21:57:06,651 | INFO | livekit.agents | plugin registered
+2026-07-18 21:57:06,660 | INFO | livekit.agents | HTTP server listening on :62985
+2026-07-18 21:57:06,666 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-18 21:57:06,677 | INFO | livekit.agents | initializing job runner
+2026-07-18 21:57:06,686 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-18 21:57:06,687 | INFO | livekit.agents | job runner initialized
+2026-07-18 21:57:06,727 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-18 21:57:06,749 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-18 21:57:06,749 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-18 21:57:06,779 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-18 21:57:06,779 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-18 21:57:06,779 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-18 21:57:08,305 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-18 21:57:08,344 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-18 21:57:08,901 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-18 21:57:10,902 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-18 21:57:16,004 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:57:24,593 | WARNING | livekit.agents | turn detection transport latency is too high: 4138ms
+2026-07-18 21:57:25,588 | DEBUG | livekit.agents | received user transcript
+2026-07-18 21:57:25,610 | DEBUG | livekit.agents | eot prediction
+2026-07-18 21:57:25,617 | DEBUG | livekit.agents | user turn committed
+2026-07-18 21:57:25,624 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 21:57:25,629 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:57:27,325 | DEBUG | livekit.agents | executing tool
+2026-07-18 21:57:27,329 | INFO | research-agent | [TOOL CALL] search_web(query=احمد السقى)
+2026-07-18 21:57:30,057 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-18 21:57:30,065 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 21:57:30,889 | DEBUG | livekit.agents | executing tool
+2026-07-18 21:57:30,895 | INFO | research-agent | [TOOL CALL] search_web(query=ahmed el sakka)
+2026-07-18 21:57:32,609 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-18 21:57:32,616 | DEBUG | livekit.agents | tools execution completed
+2026-07-18 21:57:33,845 | DEBUG | livekit.agents | flush audio emitter due to slow audio generation
+2026-07-18 21:58:00,403 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:58:06,673 | DEBUG | livekit.agents | received user transcript
+2026-07-18 21:58:06,757 | DEBUG | livekit.agents | eot prediction
+2026-07-18 21:58:06,892 | DEBUG | livekit.agents | user turn committed
+2026-07-18 21:58:06,898 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 21:58:06,904 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:58:13,001 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:58:16,218 | DEBUG | livekit.agents | received user transcript
+2026-07-18 21:58:16,231 | DEBUG | livekit.agents | eot prediction
+2026-07-18 21:58:16,393 | DEBUG | livekit.agents | user turn committed
+2026-07-18 21:58:16,406 | DEBUG | livekit.agents | using preemptive generation
+2026-07-18 21:58:16,417 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:58:21,193 | DEBUG | livekit.agents | conversation_item_added
+2026-07-18 21:58:25,086 | INFO | livekit.agents | shutting down worker
+2026-07-18 21:58:25,202 | DEBUG | livekit.agents | session closed
+2026-07-18 21:58:25,208 | DEBUG | livekit.agents | shutting down job task
+2026-07-18 21:58:25,211 | DEBUG | livekit.agents | job exiting
+2026-07-18 21:58:25,213 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx

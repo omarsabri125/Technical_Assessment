@@ -158,6 +158,14 @@ python -m src.cli index --pdf "data/input/IPI Aug 2025 EN.pdf" "data/input/LMS Q
 python -m src.cli ask "Summarize the key points from these reports"
 ```
 
+## Improvement ideas for answer quality on long documents
+
+If answer quality is weak on longer documents, the first thing I would change is the chunking strategy. The current approach uses fairly large markdown chunks, which can make it harder for the retriever to isolate the most relevant passage when a question targets a very specific section. I would reduce chunk size and increase overlap so that important facts remain preserved in local context and nearby sentences are still available. This is especially useful for financial reports, where the answer may depend on a single table row, a short paragraph, or a chart caption rather than a broad section of text.
+
+I would also strengthen the retrieval layer by tuning the hybrid search setup. A balanced combination of sparse retrieval and dense vector retrieval is already useful, but for long and heterogeneous documents it can still miss important information if the query is highly specific. I would experiment with a stronger dense retrieval configuration, adjust the top-k values, and add a re-ranking step so that the most relevant chunks are promoted before the language model generates an answer. Re-ranking is particularly valuable when the initial retrieval returns many related but not fully relevant passages.
+
+In practice, I would start with smaller chunks, more overlap, and a slightly higher number of retrieved candidates, then apply re-ranking before sending the context to the model. This should improve grounding, reduce hallucination, and make the system more reliable for complex financial documents.
+
 ## Example Q&A samples
 
 The following examples show the kind of questions this system can answer from indexed financial documents, along with the supporting context it uses:

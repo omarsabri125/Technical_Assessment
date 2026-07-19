@@ -266,3 +266,343 @@ src.tools.web_search_tool.WebSearchError: The web search service is currently un
 2026-07-18 21:58:25,208 | DEBUG | livekit.agents | shutting down job task
 2026-07-18 21:58:25,211 | DEBUG | livekit.agents | job exiting
 2026-07-18 21:58:25,213 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 11:28:00,628 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:28:00,651 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 11:28:00,651 | INFO | livekit.agents | starting worker
+2026-07-19 11:28:00,651 | INFO | livekit.agents | plugin registered
+2026-07-19 11:28:00,658 | INFO | livekit.agents | plugin registered
+2026-07-19 11:28:00,659 | INFO | livekit.agents | plugin registered
+2026-07-19 11:28:00,681 | INFO | livekit.agents | HTTP server listening on :60343
+2026-07-19 11:28:00,699 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 11:28:00,720 | INFO | livekit.agents | initializing job runner
+2026-07-19 11:28:00,723 | INFO | livekit.agents | job runner initialized
+2026-07-19 11:28:00,723 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:28:00,802 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 11:28:01,460 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 11:28:01,472 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 11:28:01,500 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 11:28:01,509 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 11:28:01,515 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 11:28:05,142 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 11:28:05,157 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 11:28:05,704 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 11:28:07,707 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 11:28:14,105 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:28:19,091 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:28:20,694 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:28:20,864 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:28:20,870 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:28:20,878 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:28:20,895 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:28:21,074 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:28:21,079 | INFO | research-agent | [TOOL CALL] search_web(query=machine learning current information)
+2026-07-19 11:28:22,673 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:28:22,680 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:28:52,505 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:28:58,292 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:28:58,407 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:28:58,584 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:28:58,595 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:28:58,612 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:28:58,649 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:29:30,217 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:29:34,987 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:29:35,087 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:29:35,103 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:29:35,112 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:29:35,121 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:29:42,214 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:29:57,757 | INFO | livekit.agents | shutting down worker
+2026-07-19 11:29:57,887 | DEBUG | livekit.agents | session closed
+2026-07-19 11:29:57,936 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 11:29:57,945 | DEBUG | livekit.agents | job exiting
+2026-07-19 11:29:57,950 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 11:33:23,319 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:33:23,348 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 11:33:23,355 | INFO | livekit.agents | starting worker
+2026-07-19 11:33:23,357 | INFO | livekit.agents | plugin registered
+2026-07-19 11:33:23,359 | INFO | livekit.agents | plugin registered
+2026-07-19 11:33:23,368 | INFO | livekit.agents | plugin registered
+2026-07-19 11:33:23,385 | INFO | livekit.agents | HTTP server listening on :62277
+2026-07-19 11:33:23,402 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 11:33:23,425 | INFO | livekit.agents | initializing job runner
+2026-07-19 11:33:23,425 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:33:23,428 | INFO | livekit.agents | job runner initialized
+2026-07-19 11:33:23,491 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 11:33:23,636 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 11:33:23,653 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 11:33:23,686 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 11:33:23,695 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 11:33:23,698 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 11:33:25,685 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 11:33:25,757 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 11:33:26,253 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 11:33:28,237 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 11:33:36,353 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:33:42,949 | DEBUG | livekit.agents | received user preflight transcript
+2026-07-19 11:33:42,984 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:33:43,003 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:33:43,021 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:33:43,031 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:33:43,053 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:33:43,399 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:33:43,408 | INFO | research-agent | [TOOL CALL] search_web(query=Ayush and computer vision)
+2026-07-19 11:33:44,722 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:33:44,726 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:33:58,153 | DEBUG | livekit.agents | interruption detected
+2026-07-19 11:34:02,680 | DEBUG | livekit.agents | received user preflight transcript
+2026-07-19 11:34:02,773 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:34:02,787 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:34:02,794 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:34:02,807 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:02,831 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:03,176 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:34:03,197 | INFO | research-agent | [TOOL CALL] search_web(query=Foldlock eyes)
+2026-07-19 11:34:04,268 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:34:04,280 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:34:20,356 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:22,311 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:34:23,914 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:34:23,918 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:34:23,926 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:34:23,933 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:24,029 | DEBUG | livekit.agents | received user preflight transcript
+2026-07-19 11:34:24,358 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:34:24,371 | WARNING | livekit.agents | transcript arrives after turn has been committed. consider raising `min_delay` in the endpointing options to accommodate a slow stt. subsequent occurrences will log at debug level.
+2026-07-19 11:34:24,382 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:34:24,385 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:34:24,400 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:24,770 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:34:24,780 | INFO | research-agent | [TOOL CALL] search_web(query=Ravi que l'aime)
+2026-07-19 11:34:26,575 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:34:26,579 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:34:38,604 | DEBUG | livekit.agents | interruption detected
+2026-07-19 11:34:41,460 | DEBUG | livekit.agents | received user preflight transcript
+2026-07-19 11:34:42,572 | DEBUG | livekit.agents | received user preflight transcript
+2026-07-19 11:34:43,244 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:34:43,249 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:34:43,254 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:34:43,264 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:43,281 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:45,652 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:34:55,893 | INFO | livekit.agents | shutting down worker
+2026-07-19 11:34:56,028 | DEBUG | livekit.agents | session closed
+2026-07-19 11:34:56,053 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 11:34:56,062 | DEBUG | livekit.agents | job exiting
+2026-07-19 11:34:56,066 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 11:36:31,195 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:36:31,225 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 11:36:31,227 | INFO | livekit.agents | starting worker
+2026-07-19 11:36:31,231 | INFO | livekit.agents | plugin registered
+2026-07-19 11:36:31,234 | INFO | livekit.agents | plugin registered
+2026-07-19 11:36:31,234 | INFO | livekit.agents | plugin registered
+2026-07-19 11:36:31,246 | INFO | livekit.agents | HTTP server listening on :57621
+2026-07-19 11:36:31,267 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 11:36:31,693 | INFO | livekit.agents | initializing job runner
+2026-07-19 11:36:31,693 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:36:31,693 | INFO | livekit.agents | job runner initialized
+2026-07-19 11:36:31,775 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 11:36:31,942 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 11:36:31,958 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 11:36:31,977 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 11:36:31,977 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 11:36:31,993 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 11:36:33,972 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 11:36:34,032 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 11:36:34,486 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 11:36:36,490 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 11:36:43,287 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:36:47,157 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:36:48,973 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:36:49,042 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:36:49,055 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:36:49,063 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:36:49,073 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:36:49,392 | WARNING | livekit.agents | failed to generate LLM completion: Connection error., retrying in 0.1s
+2026-07-19 11:36:49,897 | WARNING | livekit.agents | failed to generate LLM completion: Connection error., retrying in 2.0s
+2026-07-19 11:36:52,310 | WARNING | livekit.agents | failed to generate LLM completion: Connection error., retrying in 2.0s
+2026-07-19 11:36:54,664 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:36:54,671 | INFO | research-agent | [TOOL CALL] search_web(query=كمبيوتر فيجن)
+2026-07-19 11:36:56,508 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:36:56,513 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:37:18,689 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:38:06,756 | INFO | livekit.agents | shutting down worker
+2026-07-19 11:38:06,895 | DEBUG | livekit.agents | session closed
+2026-07-19 11:38:06,913 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 11:38:06,918 | DEBUG | livekit.agents | job exiting
+2026-07-19 11:38:06,924 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 11:38:45,797 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:38:45,821 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 11:38:45,824 | INFO | livekit.agents | starting worker
+2026-07-19 11:38:45,827 | INFO | livekit.agents | plugin registered
+2026-07-19 11:38:45,829 | INFO | livekit.agents | plugin registered
+2026-07-19 11:38:45,829 | INFO | livekit.agents | plugin registered
+2026-07-19 11:38:45,847 | INFO | livekit.agents | HTTP server listening on :54863
+2026-07-19 11:38:45,862 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 11:38:45,882 | INFO | livekit.agents | initializing job runner
+2026-07-19 11:38:45,882 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:38:45,882 | INFO | livekit.agents | job runner initialized
+2026-07-19 11:38:45,974 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 11:38:46,108 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 11:38:46,126 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 11:38:46,160 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 11:38:46,168 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 11:38:46,176 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 11:38:48,683 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 11:38:48,689 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 11:38:49,157 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 11:38:51,166 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 11:38:56,959 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:39:19,599 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:39:19,729 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:39:19,743 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:39:19,759 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:39:19,783 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:39:27,770 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:39:55,644 | INFO | livekit.agents | shutting down worker
+2026-07-19 11:39:55,768 | DEBUG | livekit.agents | session closed
+2026-07-19 11:39:55,783 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 11:39:55,795 | DEBUG | livekit.agents | job exiting
+2026-07-19 11:39:55,802 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 11:45:35,147 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:45:35,163 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 11:45:35,172 | INFO | livekit.agents | starting worker
+2026-07-19 11:45:35,172 | INFO | livekit.agents | plugin registered
+2026-07-19 11:45:35,176 | INFO | livekit.agents | plugin registered
+2026-07-19 11:45:35,178 | INFO | livekit.agents | plugin registered
+2026-07-19 11:45:35,188 | INFO | livekit.agents | HTTP server listening on :52210
+2026-07-19 11:45:35,195 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 11:45:35,207 | INFO | livekit.agents | initializing job runner
+2026-07-19 11:45:35,215 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 11:45:35,216 | INFO | livekit.agents | job runner initialized
+2026-07-19 11:45:35,255 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 11:45:35,370 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 11:45:35,386 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 11:45:35,411 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 11:45:35,420 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 11:45:35,425 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 11:45:36,944 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 11:45:36,965 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 11:45:37,537 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 11:45:39,530 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 11:45:47,140 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:45:50,830 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:45:52,724 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:45:52,788 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:45:52,794 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:45:52,802 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:45:52,814 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:45:53,166 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:45:53,179 | INFO | research-agent | [TOOL CALL] search_web(query=تعلم الآلة)
+2026-07-19 11:45:54,570 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:45:54,574 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:46:21,239 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:46:30,336 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:46:30,625 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:46:33,043 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:46:33,100 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:46:35,003 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:46:35,019 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:46:35,030 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:46:35,036 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:46:35,040 | INFO | research-agent | [TOOL CALL] search_web(query=فرق بين الماشين ليرنينج والدي بليرنينج)
+2026-07-19 11:46:36,551 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:46:36,556 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:46:54,738 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:47:01,640 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:47:01,800 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:47:03,707 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:47:03,720 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:47:03,730 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:47:03,737 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:47:03,741 | INFO | research-agent | [TOOL CALL] search_web(query=ماشين ليرنينج والدي بليرنينج ما هو الفرق بينهما)
+2026-07-19 11:47:05,351 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:47:05,358 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:47:28,439 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:47:36,836 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:47:36,922 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:47:36,927 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:47:36,932 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:47:36,938 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:47:37,663 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:47:37,671 | INFO | research-agent | [TOOL CALL] search_web(query=ماشين ليرنينج والدي بليرنينج بيستخدم في اي مجال)
+2026-07-19 11:47:39,341 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:47:39,394 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:47:39,399 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:47:39,421 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:47:39,425 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:47:39,430 | WARNING | livekit.agents | preemptive generation enabled but chat context or tools have changed after `on_user_turn_completed`
+2026-07-19 11:47:39,442 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:47:40,331 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:47:40,338 | INFO | research-agent | [TOOL CALL] search_web(query=الابليكيشن الماشين ليرنينج والدي بليرنينج)
+2026-07-19 11:47:41,739 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:47:41,748 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:48:28,437 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:48:59,629 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:48:59,682 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:48:59,687 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:48:59,693 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:48:59,701 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:49:00,709 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:49:00,721 | INFO | research-agent | [TOOL CALL] search_web(query=مين موقف اكثر معقد بين الماشين ليرنينج والدي بليرنينج)
+2026-07-19 11:49:02,362 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:49:02,370 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:49:16,238 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:51:06,836 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:51:06,860 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:51:06,866 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:51:06,871 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:51:06,875 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:51:07,833 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:51:07,838 | INFO | research-agent | [TOOL CALL] search_web(query=شكرا على مساعدتك)
+2026-07-19 11:51:09,310 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:51:09,318 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:51:21,936 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:51:38,027 | DEBUG | livekit.agents | received user transcript
+2026-07-19 11:51:38,101 | DEBUG | livekit.agents | eot prediction
+2026-07-19 11:51:38,105 | DEBUG | livekit.agents | user turn committed
+2026-07-19 11:51:38,110 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 11:51:38,115 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 11:51:38,333 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 5571, Requested 6463. Please try again in 170ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", status_code=429, retryable=True, request_id=req_01kxws5s8rers88wd50qs93ax6, body={'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 5571, Requested 6463. Please try again in 170ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}, retrying in 0.1s
+2026-07-19 11:51:38,586 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 5518, Requested 6623. Please try again in 705ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", status_code=429, retryable=True, request_id=req_01kxws5sh0fjrs1zqcsfk7k2s4, body={'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 5518, Requested 6623. Please try again in 705ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}, retrying in 2.0s
+2026-07-19 11:51:41,182 | DEBUG | livekit.agents | executing tool
+2026-07-19 11:51:41,187 | INFO | research-agent | [TOOL CALL] search_web(query=شكرا)
+2026-07-19 11:51:42,990 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 11:51:42,993 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 11:51:43,312 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10906, Requested 6927. Please try again in 29.165s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", status_code=429, retryable=True, request_id=req_01kxws5y4pfmnvgh5pqtb511cv, body={'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10906, Requested 6927. Please try again in 29.165s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}, retrying in 0.1s
+2026-07-19 11:51:43,569 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10856, Requested 6775. Please try again in 28.155s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", status_code=429, retryable=True, request_id=req_01kxws5yche4wa8rp71d57ppnp, body={'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10856, Requested 6775. Please try again in 28.155s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}, retrying in 2.0s
+2026-07-19 11:51:45,710 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10426, Requested 6927. Please try again in 26.765s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", status_code=429, retryable=True, request_id=req_01kxws60fmfnksbsn0ftyrn0qk, body={'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10426, Requested 6927. Please try again in 26.765s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}, retrying in 2.0s
+2026-07-19 11:51:47,869 | ERROR | livekit.agents | Error in _llm_inference_task
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 223, in _main_task
+    await self._run()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\inference\llm.py", line 458, in _run
+    raise APIStatusError(
+livekit.agents._exceptions.APIStatusError: message="Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 9996, Requested 6927. Please try again in 24.615s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}", status_code=429, retryable=True, request_id=req_01kxws62jvfp6radr03xzxra4m, body={'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jykth67tfb59wvmprcbsyzhd` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 9996, Requested 6927. Please try again in 24.615s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\opentelemetry\util\_decorator.py", line 71, in async_wrapper
+    return await func(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\generation.py", line 232, in _llm_inference_task
+    async for chunk in llm_node:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\agent.py", line 544, in llm_node
+    async for chunk in stream:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 393, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 195, in _traceable_main_task
+    await self._main_task()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 245, in _main_task
+    raise APIConnectionError(
+livekit.agents._exceptions.APIConnectionError: failed to generate LLM completion after 4 attempts
+2026-07-19 11:51:57,547 | INFO | livekit.agents | shutting down worker
+2026-07-19 11:51:57,664 | DEBUG | livekit.agents | session closed
+2026-07-19 11:51:57,668 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 11:51:57,671 | DEBUG | livekit.agents | job exiting
+2026-07-19 11:51:57,675 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx

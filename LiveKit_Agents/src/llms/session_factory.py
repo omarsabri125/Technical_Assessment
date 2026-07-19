@@ -4,6 +4,7 @@ from livekit.agents import (
     inference,
 )
 
+from livekit.plugins import silero
 from ..helpers.settings import Settings
 from ..llms.llm_factory import create_llm
 from ..llms.stt_factory import create_stt
@@ -14,6 +15,7 @@ def create_agent_session(
     settings: Settings,
 ) -> AgentSession:
     return AgentSession(
+        vad=silero.VAD.load(),
         stt=create_stt(settings),
         llm=create_llm(settings),
         tts=create_tts(settings),

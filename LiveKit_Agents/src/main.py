@@ -83,8 +83,9 @@ async def entrypoint(
 
     await session.generate_reply(
         instructions=(
-            "Greet the user briefly. Tell them that you can "
-            "search the web for current and accurate information."
+        "رحّب بالمستخدم باللغة العربية المصرية باختصار. "
+        "عرّف نفسك باسم لينا، وقل إنك تستطيع البحث "
+        "على الإنترنت عن المعلومات الحديثة والدقيقة."
         ),
         allow_interruptions=True,
     )

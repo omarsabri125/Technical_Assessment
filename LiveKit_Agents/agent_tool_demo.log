@@ -606,3 +606,3239 @@ livekit.agents._exceptions.APIConnectionError: failed to generate LLM completion
 2026-07-19 11:51:57,668 | DEBUG | livekit.agents | shutting down job task
 2026-07-19 11:51:57,671 | DEBUG | livekit.agents | job exiting
 2026-07-19 11:51:57,675 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 12:06:17,588 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:06:17,608 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 12:06:17,608 | INFO | livekit.agents | starting worker
+2026-07-19 12:06:17,608 | INFO | livekit.agents | plugin registered
+2026-07-19 12:06:17,615 | INFO | livekit.agents | plugin registered
+2026-07-19 12:06:17,617 | INFO | livekit.agents | plugin registered
+2026-07-19 12:06:17,624 | INFO | livekit.agents | HTTP server listening on :64756
+2026-07-19 12:06:17,641 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 12:06:17,658 | INFO | livekit.agents | initializing job runner
+2026-07-19 12:06:17,665 | INFO | livekit.agents | job runner initialized
+2026-07-19 12:06:17,665 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:06:17,707 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 12:06:17,839 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 12:06:17,861 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 12:06:17,886 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 12:06:17,892 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 12:06:17,892 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 12:06:19,080 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 0.1s
+2026-07-19 12:06:19,289 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:06:19,416 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 12:06:19,423 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 12:06:21,517 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:06:23,658 | ERROR | livekit.agents | Error in _llm_inference_task
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 223, in _main_task
+    await self._run()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\inference\llm.py", line 458, in _run
+    raise APIStatusError(
+livekit.agents._exceptions.APIStatusError: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\opentelemetry\util\_decorator.py", line 71, in async_wrapper
+    return await func(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\generation.py", line 232, in _llm_inference_task
+    async for chunk in llm_node:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\agent.py", line 544, in llm_node
+    async for chunk in stream:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 393, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 195, in _traceable_main_task
+    await self._main_task()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 245, in _main_task
+    raise APIConnectionError(
+livekit.agents._exceptions.APIConnectionError: failed to generate LLM completion after 4 attempts
+2026-07-19 12:06:48,944 | INFO | livekit.agents | shutting down worker
+2026-07-19 12:06:49,076 | DEBUG | livekit.agents | session closed
+2026-07-19 12:06:49,080 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 12:06:49,084 | DEBUG | livekit.agents | job exiting
+2026-07-19 12:06:49,087 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 12:07:46,124 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:07:46,124 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 12:07:46,138 | INFO | livekit.agents | starting worker
+2026-07-19 12:07:46,140 | INFO | livekit.agents | plugin registered
+2026-07-19 12:07:46,142 | INFO | livekit.agents | plugin registered
+2026-07-19 12:07:46,145 | INFO | livekit.agents | plugin registered
+2026-07-19 12:07:46,157 | INFO | livekit.agents | HTTP server listening on :62502
+2026-07-19 12:07:46,168 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 12:07:46,180 | INFO | livekit.agents | initializing job runner
+2026-07-19 12:07:46,182 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:07:46,182 | INFO | livekit.agents | job runner initialized
+2026-07-19 12:07:46,229 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 12:07:46,360 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 12:07:46,376 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 12:07:46,399 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 12:07:46,399 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 12:07:46,399 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 12:07:47,619 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 0.1s
+2026-07-19 12:07:47,875 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:07:47,990 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 12:07:47,996 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 12:07:50,121 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:07:51,071 | INFO | livekit.agents | shutting down worker
+2026-07-19 12:07:52,284 | ERROR | livekit.agents | Error in _llm_inference_task
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 223, in _main_task
+    await self._run()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\inference\llm.py", line 458, in _run
+    raise APIStatusError(
+livekit.agents._exceptions.APIStatusError: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\opentelemetry\util\_decorator.py", line 71, in async_wrapper
+    return await func(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\generation.py", line 232, in _llm_inference_task
+    async for chunk in llm_node:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\agent.py", line 544, in llm_node
+    async for chunk in stream:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 393, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 195, in _traceable_main_task
+    await self._main_task()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 245, in _main_task
+    raise APIConnectionError(
+livekit.agents._exceptions.APIConnectionError: failed to generate LLM completion after 4 attempts
+2026-07-19 12:07:52,413 | DEBUG | livekit.agents | session closed
+2026-07-19 12:07:52,423 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 12:07:52,429 | DEBUG | livekit.agents | job exiting
+2026-07-19 12:07:52,439 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 12:08:56,726 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:08:56,742 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 12:08:56,752 | INFO | livekit.agents | starting worker
+2026-07-19 12:08:56,754 | INFO | livekit.agents | plugin registered
+2026-07-19 12:08:56,756 | INFO | livekit.agents | plugin registered
+2026-07-19 12:08:56,759 | INFO | livekit.agents | plugin registered
+2026-07-19 12:08:56,770 | INFO | livekit.agents | HTTP server listening on :54385
+2026-07-19 12:08:56,782 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 12:08:56,799 | INFO | livekit.agents | initializing job runner
+2026-07-19 12:08:56,802 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:08:56,803 | INFO | livekit.agents | job runner initialized
+2026-07-19 12:08:56,853 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 12:08:56,990 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 12:08:56,996 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 12:08:57,026 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 12:08:57,026 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 12:08:57,035 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 12:08:58,569 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 12:08:58,582 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 12:08:59,640 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 12:09:01,659 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 12:09:06,843 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 12:09:12,081 | DEBUG | livekit.agents | received user transcript
+2026-07-19 12:09:12,185 | DEBUG | livekit.agents | eot prediction
+2026-07-19 12:09:12,190 | DEBUG | livekit.agents | user turn committed
+2026-07-19 12:09:12,194 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 12:09:12,198 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 12:09:13,835 | DEBUG | livekit.agents | executing tool
+2026-07-19 12:09:13,842 | INFO | research-agent | [TOOL CALL] search_web(query=artificial intelligence overview 2024)
+2026-07-19 12:09:15,711 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 12:09:15,716 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 12:10:38,440 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 12:11:26,648 | INFO | livekit.agents | shutting down worker
+2026-07-19 12:11:26,922 | DEBUG | livekit.agents | session closed
+2026-07-19 12:11:26,942 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 12:11:26,953 | DEBUG | livekit.agents | job exiting
+2026-07-19 12:11:26,958 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 12:11:40,918 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:11:40,918 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 12:11:40,930 | INFO | livekit.agents | starting worker
+2026-07-19 12:11:40,933 | INFO | livekit.agents | plugin registered
+2026-07-19 12:11:40,934 | INFO | livekit.agents | plugin registered
+2026-07-19 12:11:40,937 | INFO | livekit.agents | plugin registered
+2026-07-19 12:11:40,943 | INFO | livekit.agents | HTTP server listening on :61926
+2026-07-19 12:11:40,953 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 12:11:40,970 | INFO | livekit.agents | initializing job runner
+2026-07-19 12:11:40,972 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:11:40,972 | INFO | livekit.agents | job runner initialized
+2026-07-19 12:11:41,015 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 12:11:41,146 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 12:11:41,149 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 12:11:41,173 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 12:11:41,173 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 12:11:41,184 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 12:11:42,603 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 0.1s
+2026-07-19 12:11:42,728 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 12:11:42,848 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:11:43,716 | WARNING | livekit.agents | turn detection transport latency is too high: 1284ms
+2026-07-19 12:11:43,725 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 12:11:44,978 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:11:47,135 | ERROR | livekit.agents | Error in _llm_inference_task
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 223, in _main_task
+    await self._run()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\inference\llm.py", line 458, in _run
+    raise APIStatusError(
+livekit.agents._exceptions.APIStatusError: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\opentelemetry\util\_decorator.py", line 71, in async_wrapper
+    return await func(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\generation.py", line 232, in _llm_inference_task
+    async for chunk in llm_node:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\agent.py", line 544, in llm_node
+    async for chunk in stream:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 393, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 195, in _traceable_main_task
+    await self._main_task()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 245, in _main_task
+    raise APIConnectionError(
+livekit.agents._exceptions.APIConnectionError: failed to generate LLM completion after 4 attempts
+2026-07-19 12:11:49,155 | INFO | livekit.agents | shutting down worker
+2026-07-19 12:11:49,276 | DEBUG | livekit.agents | session closed
+2026-07-19 12:11:49,280 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 12:11:49,285 | DEBUG | livekit.agents | job exiting
+2026-07-19 12:11:49,288 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 12:13:24,420 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:13:24,434 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 12:13:24,438 | INFO | livekit.agents | starting worker
+2026-07-19 12:13:24,439 | INFO | livekit.agents | plugin registered
+2026-07-19 12:13:24,441 | INFO | livekit.agents | plugin registered
+2026-07-19 12:13:24,442 | INFO | livekit.agents | plugin registered
+2026-07-19 12:13:24,451 | INFO | livekit.agents | HTTP server listening on :52333
+2026-07-19 12:13:24,460 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 12:13:24,476 | INFO | livekit.agents | initializing job runner
+2026-07-19 12:13:24,477 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:13:24,477 | INFO | livekit.agents | job runner initialized
+2026-07-19 12:13:24,519 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 12:13:24,649 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 12:13:24,649 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 12:13:24,675 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 12:13:24,686 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 12:13:24,687 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 12:13:28,648 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 0.1s
+2026-07-19 12:13:28,950 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 12:13:28,959 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 12:13:28,968 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:13:31,181 | WARNING | livekit.agents | failed to generate LLM completion: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, retrying in 2.0s
+2026-07-19 12:13:33,374 | ERROR | livekit.agents | Error in _llm_inference_task
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 223, in _main_task
+    await self._run()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\inference\llm.py", line 458, in _run
+    raise APIStatusError(
+livekit.agents._exceptions.APIStatusError: message="Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}, 'user_id': 'user_32pDf3LX1G9jUcOV1WNQz79YNrY'}", status_code=429, retryable=True, body={'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\opentelemetry\util\_decorator.py", line 71, in async_wrapper
+    return await func(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\generation.py", line 232, in _llm_inference_task
+    async for chunk in llm_node:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\voice\agent.py", line 544, in llm_node
+    async for chunk in stream:
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 393, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 195, in _traceable_main_task
+    await self._main_task()
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\livekit\agents\llm\llm.py", line 245, in _main_task
+    raise APIConnectionError(
+livekit.agents._exceptions.APIConnectionError: failed to generate LLM completion after 4 attempts
+2026-07-19 12:13:36,466 | INFO | livekit.agents | shutting down worker
+2026-07-19 12:13:36,589 | DEBUG | livekit.agents | session closed
+2026-07-19 12:13:36,596 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 12:13:36,600 | DEBUG | livekit.agents | job exiting
+2026-07-19 12:13:36,605 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 12:15:17,860 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:15:17,882 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 12:15:17,887 | INFO | livekit.agents | starting worker
+2026-07-19 12:15:17,888 | INFO | livekit.agents | plugin registered
+2026-07-19 12:15:17,890 | INFO | livekit.agents | plugin registered
+2026-07-19 12:15:17,891 | INFO | livekit.agents | plugin registered
+2026-07-19 12:15:17,898 | INFO | livekit.agents | HTTP server listening on :60797
+2026-07-19 12:15:17,908 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 12:15:17,925 | INFO | livekit.agents | initializing job runner
+2026-07-19 12:15:17,927 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 12:15:17,927 | INFO | livekit.agents | job runner initialized
+2026-07-19 12:15:17,970 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 12:15:18,099 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 12:15:18,102 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 12:15:18,126 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 12:15:18,131 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 12:15:18,133 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 12:15:19,675 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 12:15:19,768 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 12:15:26,817 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 12:15:28,815 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 12:15:29,827 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 12:15:35,336 | DEBUG | livekit.agents | received user transcript
+2026-07-19 12:15:37,201 | DEBUG | livekit.agents | received user transcript
+2026-07-19 12:15:37,397 | DEBUG | livekit.agents | eot prediction
+2026-07-19 12:15:37,405 | DEBUG | livekit.agents | user turn committed
+2026-07-19 12:15:37,410 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 12:15:37,417 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 12:16:10,489 | DEBUG | livekit.agents | received user transcript
+2026-07-19 12:16:10,605 | DEBUG | livekit.agents | eot prediction
+2026-07-19 12:16:10,612 | DEBUG | livekit.agents | user turn committed
+2026-07-19 12:16:10,633 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 12:16:17,023 | DEBUG | livekit.agents | executing tool
+2026-07-19 12:16:17,032 | INFO | research-agent | [TOOL CALL] search_web(query=الذكاء الاصطناعي معلومات حديثة)
+2026-07-19 12:16:18,721 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 12:16:18,731 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 12:16:25,482 | INFO | livekit.agents | shutting down worker
+2026-07-19 12:16:25,603 | DEBUG | livekit.agents | session closed
+2026-07-19 12:16:25,612 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 12:16:25,618 | DEBUG | livekit.agents | job exiting
+2026-07-19 12:16:25,623 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 15:39:14,842 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 15:39:14,920 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 15:39:14,920 | INFO | livekit.agents | starting worker
+2026-07-19 15:39:14,920 | INFO | livekit.agents | plugin registered
+2026-07-19 15:39:14,934 | INFO | livekit.agents | plugin registered
+2026-07-19 15:39:14,937 | INFO | livekit.agents | plugin registered
+2026-07-19 15:39:14,956 | INFO | livekit.agents | HTTP server listening on :65027
+2026-07-19 15:39:14,996 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 15:39:15,020 | INFO | livekit.agents | initializing job runner
+2026-07-19 15:39:15,024 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 15:39:15,026 | INFO | livekit.agents | job runner initialized
+2026-07-19 15:39:15,125 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 15:39:15,854 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 15:39:15,912 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 15:39:15,938 | INFO | research-agent | [METRICS] All metrics listeners registered.
+2026-07-19 15:39:15,960 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 15:39:15,960 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 15:39:15,965 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 15:39:21,261 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 15:39:21,269 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 15:39:21,334 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784464758-R9gulBzZDWiC5i8zw4y3
+Prompt Tokens: 540
+Completion Tokens: 70
+Total Tokens: 610
+Tokens Per Second: 13.1112
+Time To First Token: 5.1184s
+Total Duration: 5.3390s
+Cancelled: No
+=================================
+2026-07-19 15:39:21,742 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 15:39:22,006 | DEBUG | livekit.agents | flush audio emitter due to slow audio generation
+2026-07-19 15:39:23,738 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 15:39:24,144 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-99' coro=<ResearchAgent.on_tts_metrics_collected() done, defined at D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py:397> exception=AttributeError("'TTSMetrics' object has no attribute 'error'")>
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 423, in on_tts_metrics_collected
+    metrics.error or "None",
+    ^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'TTSMetrics' object has no attribute 'error'
+2026-07-19 15:39:25,734 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 8.7500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:29,736 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:30,329 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 0.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:30,569 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 0.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:32,936 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:39:34,173 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:38,187 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.0500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:40,898 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 2.7500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:43,204 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 2.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:43,209 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:39:43,312 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:39:43,417 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:39:43,427 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:39:43,444 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:39:43,451 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4972s
+End Of Turn Delay: 0.7000s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:39:48,192 | DEBUG | livekit.agents | executing tool
+2026-07-19 15:39:48,204 | INFO | research-agent | [TOOL CALL] search_web(query=artificial intelligence overview 2024)
+2026-07-19 15:39:48,215 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784464782-efgST9bYzpQvQqIrUz95
+Prompt Tokens: 562
+Completion Tokens: 227
+Total Tokens: 789
+Tokens Per Second: 45.4407
+Time To First Token: 4.9491s
+Total Duration: 4.9955s
+Cancelled: No
+=================================
+2026-07-19 15:39:48,231 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.9500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:49,731 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 15:39:49,738 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 15:39:53,112 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.9500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:39:53,341 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784464788-5RpbSWJqzentjk5miHd0
+Prompt Tokens: 1198
+Completion Tokens: 443
+Total Tokens: 1641
+Tokens Per Second: 123.8110
+Time To First Token: 1.0331s
+Total Duration: 3.5780s
+Cancelled: No
+=================================
+2026-07-19 15:39:58,586 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 5.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:01,552 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:05,001 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:08,372 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-185' coro=<ResearchAgent.on_tts_metrics_collected() done, defined at D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py:397> exception=AttributeError("'TTSMetrics' object has no attribute 'error'")>
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 423, in on_tts_metrics_collected
+    metrics.error or "None",
+    ^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'TTSMetrics' object has no attribute 'error'
+2026-07-19 15:40:09,105 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:12,326 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:15,727 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:20,607 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:25,114 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:30,010 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:34,601 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:37,735 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:41,208 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:45,716 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:50,322 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:53,309 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:40:56,808 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:01,606 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:06,499 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:10,615 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:10,932 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:41:13,639 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:16,705 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:17,004 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 0.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:17,008 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:41:17,171 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:41:17,182 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:41:17,197 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:41:17,223 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:41:17,243 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.5088s
+End Of Turn Delay: 0.6734s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:41:18,144 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784464875-qpBtbHEvSZpZoEOcjPc3
+Prompt Tokens: 1596
+Completion Tokens: 42
+Total Tokens: 1638
+Tokens Per Second: 37.4199
+Time To First Token: 0.9790s
+Total Duration: 1.1224s
+Cancelled: No
+=================================
+2026-07-19 15:41:19,183 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-253' coro=<ResearchAgent.on_tts_metrics_collected() done, defined at D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py:397> exception=AttributeError("'TTSMetrics' object has no attribute 'error'")>
+Traceback (most recent call last):
+  File "D:\Technical_Assessment\LiveKit_Agents\src\agents\research_agent.py", line 423, in on_tts_metrics_collected
+    metrics.error or "None",
+    ^^^^^^^^^^^^^
+  File "D:\Technical_Assessment\assessment\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'TTSMetrics' object has no attribute 'error'
+2026-07-19 15:41:21,944 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:41:22,018 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:27,003 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a63-5d4c-7a41-b693-97d9625cbeb3
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:41:29,610 | INFO | livekit.agents | shutting down worker
+2026-07-19 15:41:29,804 | DEBUG | livekit.agents | session closed
+2026-07-19 15:41:29,826 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 15:41:29,831 | DEBUG | livekit.agents | job exiting
+2026-07-19 15:41:29,835 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 15:53:24,294 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 15:53:24,311 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 15:53:24,317 | INFO | livekit.agents | starting worker
+2026-07-19 15:53:24,321 | INFO | livekit.agents | plugin registered
+2026-07-19 15:53:24,321 | INFO | livekit.agents | plugin registered
+2026-07-19 15:53:24,326 | INFO | livekit.agents | plugin registered
+2026-07-19 15:53:24,346 | INFO | livekit.agents | HTTP server listening on :59267
+2026-07-19 15:53:24,368 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 15:53:24,385 | INFO | livekit.agents | initializing job runner
+2026-07-19 15:53:24,392 | INFO | livekit.agents | job runner initialized
+2026-07-19 15:53:24,392 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 15:53:24,472 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 15:53:24,778 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 15:53:24,786 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 15:53:24,807 | INFO | research-agent | [METRICS] All metrics listeners registered.
+2026-07-19 15:53:24,827 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 15:53:24,827 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 15:53:24,835 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 15:53:26,910 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 15:53:26,920 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 15:53:27,939 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465605-cnEOWqppFZdPEzYyIwT6
+Prompt Tokens: 540
+Completion Tokens: 69
+Total Tokens: 609
+Tokens Per Second: 22.3253
+Time To First Token: 2.4414s
+Total Duration: 3.0907s
+Cancelled: No
+=================================
+2026-07-19 15:53:28,145 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 15:53:30,138 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 15:53:30,429 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: 8f26599e0ac1
+Time To First Byte: 0.3134s
+Processing Duration: 2.6778s
+Generated Audio Duration: 10.8027s
+Characters Count: 146
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 15:53:31,378 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 6.1500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:33,897 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:37,087 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:38,946 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:53:40,087 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:43,874 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.7500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:48,066 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.2500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:52,971 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:55,490 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:53:55,496 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:53:55,647 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:53:55,652 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:53:55,659 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:53:55,666 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:53:55,671 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4328s
+End Of Turn Delay: 0.5850s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:53:57,305 | DEBUG | livekit.agents | executing tool
+2026-07-19 15:53:57,317 | INFO | research-agent | [TOOL CALL] search_web(query=تعلم الآلة ما هو أحدث الاتجاهات 2024)
+2026-07-19 15:53:57,329 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465634-ONh2fP5u5s7jXlXjuUBF
+Prompt Tokens: 562
+Completion Tokens: 172
+Total Tokens: 734
+Tokens Per Second: 94.1891
+Time To First Token: 1.8033s
+Total Duration: 1.8261s
+Cancelled: No
+=================================
+2026-07-19 15:53:59,825 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 15:53:59,837 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 15:54:00,479 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:03,095 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465638-ELGhrevQZVS5Wa9qubZE
+Prompt Tokens: 1242
+Completion Tokens: 311
+Total Tokens: 1553
+Tokens Per Second: 95.8095
+Time To First Token: 1.0672s
+Total Duration: 3.2460s
+Cancelled: No
+=================================
+2026-07-19 15:54:04,007 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:08,874 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:12,370 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:15,404 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:17,436 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: 62f6e2ce88c1
+Time To First Byte: 0.3070s
+Processing Duration: 16.2370s
+Generated Audio Duration: 58.8788s
+Characters Count: 803
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 15:54:20,373 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:24,869 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:27,878 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:31,067 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:35,774 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:40,480 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:43,781 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:47,468 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:52,183 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:55,177 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:54:58,068 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:00,441 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:55:03,077 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:05,281 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:05,285 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:55:05,363 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:55:07,873 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:07,879 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:55:08,174 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 0.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:09,245 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465706-VZEfRKnOXV8sbFzlAIuH
+Prompt Tokens: 1535
+Completion Tokens: 105
+Total Tokens: 1640
+Tokens Per Second: 77.4915
+Time To First Token: 1.3469s
+Total Duration: 1.3550s
+Cancelled: No
+=================================
+2026-07-19 15:55:09,390 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:09,402 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:55:09,443 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:55:09,453 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:55:09,463 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:55:09,476 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:55:09,483 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.6244s
+End Of Turn Delay: 0.6643s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:55:11,633 | DEBUG | livekit.agents | executing tool
+2026-07-19 15:55:11,642 | INFO | research-agent | [TOOL CALL] search_web(query=ما هو الشات بوت واستخداماته 2024)
+2026-07-19 15:55:11,655 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465708-oONrAfJLW9R6YKV9mjer
+Prompt Tokens: 1539
+Completion Tokens: 196
+Total Tokens: 1735
+Tokens Per Second: 87.6824
+Time To First Token: 2.2159s
+Total Duration: 2.2353s
+Cancelled: No
+=================================
+2026-07-19 15:55:13,189 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 15:55:13,200 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 15:55:14,385 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:18,185 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:18,557 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465711-slvORmI2FWytaWXv8AKo
+Prompt Tokens: 2210
+Completion Tokens: 400
+Total Tokens: 2610
+Tokens Per Second: 74.8838
+Time To First Token: 2.4684s
+Total Duration: 5.3416s
+Cancelled: No
+=================================
+2026-07-19 15:55:21,791 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:25,772 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:29,214 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: 325c0e04be5e
+Time To First Byte: 0.3115s
+Processing Duration: 12.7999s
+Generated Audio Duration: 56.7545s
+Characters Count: 939
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 15:55:29,773 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:34,090 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:38,992 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:43,278 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:46,684 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:49,788 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:52,789 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:55:56,985 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:01,087 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:05,287 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:09,983 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:13,568 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:56:14,674 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:18,675 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:22,876 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:26,696 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:31,077 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:34,990 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:38,509 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:41,768 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:45,681 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:48,976 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:52,872 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:56:56,293 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:00,377 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:05,295 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:08,284 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:08,306 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:57:08,384 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:57:08,391 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:57:08,401 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:57:08,408 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:57:08,414 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.5405s
+End Of Turn Delay: 0.5990s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:57:12,066 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465827-ysSsP00nXXv6t8gtHCWh
+Prompt Tokens: 2509
+Completion Tokens: 345
+Total Tokens: 2854
+Tokens Per Second: 92.6025
+Time To First Token: 2.3009s
+Total Duration: 3.7256s
+Cancelled: No
+=================================
+2026-07-19 15:57:13,284 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:18,179 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:19,293 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: 4eb9fc413ba6
+Time To First Byte: 0.3124s
+Processing Duration: 8.5195s
+Generated Audio Duration: 40.3671s
+Characters Count: 577
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 15:57:22,582 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:27,291 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:32,269 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:36,674 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:40,796 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:44,173 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:49,077 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:51,542 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:57:53,192 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:57:56,180 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:00,072 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:04,005 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:04,010 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:58:04,160 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:58:04,170 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:58:04,181 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:58:04,199 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:58:04,219 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4435s
+End Of Turn Delay: 0.5964s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:58:04,277 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 0.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:09,285 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:12,291 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:12,318 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465882-UUydboSuxIQQQtP0v4ts
+Prompt Tokens: 2700
+Completion Tokens: 542
+Total Tokens: 3242
+Tokens Per Second: 65.7725
+Time To First Token: 5.1959s
+Total Duration: 8.2405s
+Cancelled: No
+=================================
+2026-07-19 15:58:17,326 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:19,981 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: d2cb7bae7729
+Time To First Byte: 0.3061s
+Processing Duration: 10.2052s
+Generated Audio Duration: 42.5784s
+Characters Count: 560
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 15:58:22,272 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:25,858 | DEBUG | livekit.agents | interruption detected
+2026-07-19 15:58:26,286 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:26,983 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 0.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:26,994 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:58:27,006 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:58:27,158 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:58:27,163 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:58:27,272 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:58:27,285 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.5108s
+End Of Turn Delay: 0.6696s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:58:27,993 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:29,890 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:29,897 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:58:31,109 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:31,117 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:58:32,702 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:32,715 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:58:34,774 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:34,842 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:58:34,852 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:58:34,867 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:58:34,896 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:58:34,905 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.0000s
+End Of Turn Delay: 0.6631s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:58:35,777 | DEBUG | livekit.agents | executing tool
+2026-07-19 15:58:35,790 | INFO | research-agent | [TOOL CALL] search_web(query=دريفال معنى)
+2026-07-19 15:58:35,802 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465911-wycpI8XoAGtaqNNbigZq
+Prompt Tokens: 2824
+Completion Tokens: 362
+Total Tokens: 3186
+Tokens Per Second: 117.8742
+Time To First Token: 3.0464s
+Total Duration: 3.0711s
+Cancelled: No
+=================================
+2026-07-19 15:58:37,408 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 15:58:37,418 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 15:58:39,779 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:44,704 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:48,523 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.7500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:52,298 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.8500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:55,277 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:57,185 | DEBUG | livekit.agents | interruption detected
+2026-07-19 15:58:59,083 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:58:59,097 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:58:59,125 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465916-lFx7IHj61JBe3aRKtTDv
+Prompt Tokens: 0
+Completion Tokens: 0
+Total Tokens: 0
+Tokens Per Second: 0.0000
+Time To First Token: 6.8561s
+Total Duration: 21.6999s
+Cancelled: Yes
+=================================
+2026-07-19 15:58:59,138 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:59:00,399 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:00,404 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:59:00,541 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:59:00,549 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:59:00,557 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:59:00,576 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:59:00,584 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.5294s
+End Of Turn Delay: 0.6688s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:59:05,381 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:10,190 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:12,079 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784465939-uDCUKZ1CkO45bAxVXwse
+Prompt Tokens: 3481
+Completion Tokens: 733
+Total Tokens: 4214
+Tokens Per Second: 62.8429
+Time To First Token: 9.9236s
+Total Duration: 11.6640s
+Cancelled: No
+=================================
+2026-07-19 15:59:13,194 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:17,194 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:17,729 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: f4dd3b2c49bf
+Time To First Byte: 0.5589s
+Processing Duration: 6.6613s
+Generated Audio Duration: 28.3915s
+Characters Count: 391
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 15:59:21,512 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:26,503 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:30,580 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:33,694 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:37,101 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:40,139 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:59:40,532 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:45,234 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:45,247 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:59:45,986 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 0.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:45,994 | DEBUG | livekit.agents | received user transcript
+2026-07-19 15:59:46,028 | DEBUG | livekit.agents | eot prediction
+2026-07-19 15:59:46,036 | DEBUG | livekit.agents | user turn committed
+2026-07-19 15:59:46,048 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 15:59:46,069 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 15:59:46,078 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.6284s
+End Of Turn Delay: 0.6584s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 15:59:50,885 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:53,279 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 2.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 15:59:58,179 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:03,197 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:08,116 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:12,081 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:14,083 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.9500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:19,097 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:19,108 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:00:19,958 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:00:20,134 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:21,780 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:00:21,869 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:00:21,877 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.0000s
+End Of Turn Delay: 2.5038s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 16:00:24,994 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:28,879 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:32,394 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:34,855 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784466020-RNrg8lN4mVKqOqf1Kt2U
+Prompt Tokens: 3650
+Completion Tokens: 1202
+Total Tokens: 4852
+Tokens Per Second: 92.1158
+Time To First Token: 5.7229s
+Total Duration: 13.0488s
+Cancelled: No
+=================================
+2026-07-19 16:00:36,271 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:40,566 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.2500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:43,688 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.1500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:47,330 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:51,831 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:52,378 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: 1296aa7c1d3e
+Time To First Byte: 0.3305s
+Processing Duration: 24.2386s
+Generated Audio Duration: 100.7378s
+Characters Count: 1584
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:00:56,580 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:00:59,587 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:03,277 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:08,075 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:11,679 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:15,472 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:18,694 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:23,479 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:26,593 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:30,383 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:35,267 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:38,968 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:42,976 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:45,987 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:50,382 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:53,629 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:01:58,574 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:02,538 | DEBUG | livekit.agents | interruption detected
+2026-07-19 16:02:03,082 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:03,090 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:02:03,100 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:02:03,136 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:02:04,352 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:02:04,357 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:02:04,384 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:02:04,394 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 1.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:04,399 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.0000s
+End Of Turn Delay: 0.5836s
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 16:02:04,404 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:02:04,409 | WARNING | livekit.agents | transcript arrives after turn has been committed. consider raising `min_delay` in the endpointing options to accommodate a slow stt. subsequent occurrences will log at debug level.
+2026-07-19 16:02:04,415 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:02:04,718 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:02:04,733 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:02:04,739 | INFO | research-agent | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: N/A
+End Of Turn Delay: N/A
+User Turn Callback Delay: 0.0000s
+======================================
+2026-07-19 16:02:09,373 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:10,365 | INFO | research-agent | 
+========== LLM METRICS ==========
+Request ID: gen-1784466123-XlLiaQa6MKZaMtvDCSC0
+Prompt Tokens: 4170
+Completion Tokens: 479
+Total Tokens: 4649
+Tokens Per Second: 84.9600
+Time To First Token: 4.8046s
+Total Duration: 5.6379s
+Cancelled: No
+=================================
+2026-07-19 16:02:12,965 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.5500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:14,497 | INFO | research-agent | 
+========== TTS METRICS ==========
+Request ID: d30855cfb012
+Time To First Byte: 0.2987s
+Processing Duration: 4.4826s
+Generated Audio Duration: 19.9918s
+Characters Count: 233
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:02:16,881 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.9500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:19,987 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:23,483 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:27,580 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:30,345 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:02:32,479 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:35,979 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:39,384 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:43,685 | INFO | research-agent | 
+========== STT METRICS ==========
+Request ID: 019f7a70-4492-7e23-856d-bb4b2ea548b2
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:02:45,255 | INFO | livekit.agents | shutting down worker
+2026-07-19 16:02:45,396 | DEBUG | livekit.agents | session closed
+2026-07-19 16:02:45,412 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 16:02:45,428 | DEBUG | livekit.agents | job exiting
+2026-07-19 16:02:45,435 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 16:23:28,795 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:23:28,835 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 16:23:28,840 | INFO | livekit.agents | starting worker
+2026-07-19 16:23:28,842 | INFO | livekit.agents | plugin registered
+2026-07-19 16:23:28,845 | INFO | livekit.agents | plugin registered
+2026-07-19 16:23:28,848 | INFO | livekit.agents | plugin registered
+2026-07-19 16:23:28,870 | INFO | livekit.agents | HTTP server listening on :57153
+2026-07-19 16:23:28,888 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 16:23:28,913 | INFO | livekit.agents | initializing job runner
+2026-07-19 16:23:28,914 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:23:28,914 | INFO | livekit.agents | job runner initialized
+2026-07-19 16:23:29,002 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 16:23:29,250 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 16:23:29,252 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 16:23:29,273 | INFO | metrics-registry | [METRICS] Metrics listeners registered.
+2026-07-19 16:23:29,296 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 16:23:29,298 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 16:23:29,298 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 16:23:31,361 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 16:23:31,468 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 16:23:33,758 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 540
+Completion Tokens: 72
+Total Tokens: 612
+Tokens Per Second: 16.1970
+Time To First Token: 4.1203s
+Total Duration: 4.4453s
+Cancelled: No
+=================================
+2026-07-19 16:23:33,968 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 16:23:35,681 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.9500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:23:35,977 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 16:23:36,455 | INFO | agent-metrics | 
+========== TTS METRICS ==========
+Time To First Byte: 0.3013s
+Processing Duration: 2.8665s
+Generated Audio Duration: 11.5922s
+Characters Count: 144
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:23:39,500 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:23:43,289 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:23:45,569 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:23:47,027 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:23:51,380 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:23:55,885 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:23:59,881 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:03,233 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:08,188 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:10,596 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 2.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:10,603 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:24:10,794 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:24:10,815 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:24:10,822 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:24:10,836 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:24:10,843 | INFO | agent-metrics | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4725s
+End Of Turn Delay: 0.6773s
+======================================
+2026-07-19 16:24:14,097 | DEBUG | livekit.agents | executing tool
+2026-07-19 16:24:14,121 | INFO | research-agent | [TOOL CALL] search_web(query=تعلم الآلة Machine learning overview 2024)
+2026-07-19 16:24:14,133 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 560
+Completion Tokens: 233
+Total Tokens: 793
+Tokens Per Second: 66.2072
+Time To First Token: 3.4849s
+Total Duration: 3.5193s
+Cancelled: No
+=================================
+2026-07-19 16:24:15,646 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:15,695 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 16:24:15,702 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 16:24:18,628 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:19,271 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 1245
+Completion Tokens: 337
+Total Tokens: 1582
+Tokens Per Second: 94.6426
+Time To First Token: 1.2570s
+Total Duration: 3.5608s
+Cancelled: No
+=================================
+2026-07-19 16:24:22,413 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:26,501 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:28,841 | INFO | agent-metrics | 
+========== TTS METRICS ==========
+Time To First Byte: 0.3024s
+Processing Duration: 11.5589s
+Generated Audio Duration: 44.6919s
+Characters Count: 936
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:24:30,118 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:34,834 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:38,297 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:39,080 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 0.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:44,081 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:47,139 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:50,380 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:53,532 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:24:57,288 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:00,984 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:02,367 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:25:04,620 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.6500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:08,191 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.5500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:12,530 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:16,892 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:20,586 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:24,091 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:27,552 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:31,395 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:35,193 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:38,333 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:41,396 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:45,279 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:49,388 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:52,563 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.2000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:25:56,196 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.6000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:00,002 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:04,647 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:08,689 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:12,678 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:12,683 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:26:12,827 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:26:12,834 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:26:12,845 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:26:12,852 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:26:12,856 | INFO | agent-metrics | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4439s
+End Of Turn Delay: 0.5868s
+======================================
+2026-07-19 16:26:17,641 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:20,689 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:23,478 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 1543
+Completion Tokens: 51
+Total Tokens: 1594
+Tokens Per Second: 4.7293
+Time To First Token: 10.6656s
+Total Duration: 10.7839s
+Cancelled: No
+=================================
+2026-07-19 16:26:24,182 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.5000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:24,838 | INFO | agent-metrics | 
+========== TTS METRICS ==========
+Time To First Byte: 0.3533s
+Processing Duration: 1.3452s
+Generated Audio Duration: 3.6164s
+Characters Count: 40
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:26:27,228 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:27,467 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:26:30,683 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:33,527 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 2.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:33,532 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:26:33,729 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:26:33,740 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:26:33,752 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:26:33,770 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:26:33,779 | INFO | agent-metrics | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4997s
+End Of Turn Delay: 0.7011s
+======================================
+2026-07-19 16:26:35,202 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 1574
+Completion Tokens: 139
+Total Tokens: 1713
+Tokens Per Second: 83.7365
+Time To First Token: 1.5743s
+Total Duration: 1.6600s
+Cancelled: No
+=================================
+2026-07-19 16:26:36,385 | INFO | agent-metrics | 
+========== TTS METRICS ==========
+Time To First Byte: 0.3000s
+Processing Duration: 1.1762s
+Generated Audio Duration: 4.0808s
+Characters Count: 46
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:26:38,537 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:39,668 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:26:42,838 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.3000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:47,250 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:47,255 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:26:47,432 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:26:47,440 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:26:47,448 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:26:47,455 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:26:47,461 | INFO | agent-metrics | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.4238s
+End Of Turn Delay: 0.6025s
+======================================
+2026-07-19 16:26:48,837 | DEBUG | livekit.agents | executing tool
+2026-07-19 16:26:48,863 | INFO | research-agent | [TOOL CALL] search_web(query=current time Cairo)
+2026-07-19 16:26:48,881 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 1615
+Completion Tokens: 106
+Total Tokens: 1721
+Tokens Per Second: 65.6449
+Time To First Token: 1.5727s
+Total Duration: 1.6147s
+Cancelled: No
+=================================
+2026-07-19 16:26:50,006 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 16:26:50,017 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 16:26:52,250 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:55,385 | DEBUG | livekit.agents | executing tool
+2026-07-19 16:26:55,398 | INFO | research-agent | [TOOL CALL] search_web(query=current time in Cairo Egypt now)
+2026-07-19 16:26:55,408 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 2273
+Completion Tokens: 91
+Total Tokens: 2364
+Tokens Per Second: 16.9489
+Time To First Token: 5.3459s
+Total Duration: 5.3691s
+Cancelled: No
+=================================
+2026-07-19 16:26:56,144 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.9000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:26:56,624 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 16:26:56,627 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 16:26:58,312 | DEBUG | livekit.agents | executing tool
+2026-07-19 16:26:58,323 | INFO | research-agent | [TOOL CALL] search_web(query=Egypt time zone 2024 daylight saving time)
+2026-07-19 16:26:58,335 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 2896
+Completion Tokens: 93
+Total Tokens: 2989
+Tokens Per Second: 54.6387
+Time To First Token: 1.6803s
+Total Duration: 1.7021s
+Cancelled: No
+=================================
+2026-07-19 16:26:59,383 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 16:26:59,398 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 16:26:59,544 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.4000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:04,536 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:04,840 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 3383
+Completion Tokens: 495
+Total Tokens: 3878
+Tokens Per Second: 91.1905
+Time To First Token: 4.3900s
+Total Duration: 5.4282s
+Cancelled: No
+=================================
+2026-07-19 16:27:09,265 | INFO | agent-metrics | 
+========== TTS METRICS ==========
+Time To First Byte: 0.4356s
+Processing Duration: 4.7002s
+Generated Audio Duration: 20.7004s
+Characters Count: 250
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:27:09,394 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:14,418 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:19,124 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.7500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:23,980 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 4.8500s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:25,774 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:27:27,789 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:30,599 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 2.8000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:30,606 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:27:30,706 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:27:30,712 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:27:30,723 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:27:30,739 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:27:30,746 | INFO | agent-metrics | 
+====== END OF UTTERANCE METRICS ======
+Transcription Delay: 0.5497s
+End Of Turn Delay: 0.6494s
+======================================
+2026-07-19 16:27:32,187 | INFO | agent-metrics | 
+========== LLM METRICS ==========
+Prompt Tokens: 3504
+Completion Tokens: 64
+Total Tokens: 3568
+Tokens Per Second: 40.7909
+Time To First Token: 1.3474s
+Total Duration: 1.5690s
+Cancelled: No
+=================================
+2026-07-19 16:27:33,997 | INFO | agent-metrics | 
+========== TTS METRICS ==========
+Time To First Byte: 0.3008s
+Processing Duration: 1.7963s
+Generated Audio Duration: 7.0065s
+Characters Count: 70
+Streamed: Yes
+Cancelled: No
+=================================
+2026-07-19 16:27:35,653 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.1000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:39,386 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 3.7000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:39,568 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:27:44,330 | INFO | agent-metrics | 
+========== STT METRICS ==========
+Processing Duration: 0.0000s
+Audio Duration: 5.0000s
+Real-Time Factor: 0.0000
+Streamed: Yes
+=================================
+2026-07-19 16:27:46,870 | INFO | livekit.agents | shutting down worker
+2026-07-19 16:27:47,001 | DEBUG | livekit.agents | session closed
+2026-07-19 16:27:47,011 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 16:27:47,019 | DEBUG | livekit.agents | job exiting
+2026-07-19 16:27:47,025 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 16:28:09,017 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:28:09,042 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 16:28:09,042 | INFO | livekit.agents | starting worker
+2026-07-19 16:28:09,047 | INFO | livekit.agents | plugin registered
+2026-07-19 16:28:09,047 | INFO | livekit.agents | plugin registered
+2026-07-19 16:28:09,050 | INFO | livekit.agents | plugin registered
+2026-07-19 16:28:09,066 | INFO | livekit.agents | HTTP server listening on :61446
+2026-07-19 16:28:09,069 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 16:28:09,103 | INFO | livekit.agents | initializing job runner
+2026-07-19 16:28:09,109 | INFO | livekit.agents | job runner initialized
+2026-07-19 16:28:09,109 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:28:09,174 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 16:28:09,460 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 16:28:09,474 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 16:28:09,520 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 16:28:09,525 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 16:28:09,529 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 16:28:12,355 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 16:28:12,363 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 16:28:13,146 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 16:28:15,139 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 16:28:24,447 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:28:32,694 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:28:34,451 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:28:35,860 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:28:35,929 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:28:35,932 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:28:35,937 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:28:35,944 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:28:53,592 | DEBUG | livekit.agents | interruption detected
+2026-07-19 16:28:54,366 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:28:54,375 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:28:55,730 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:28:55,739 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:28:55,759 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:29:02,547 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:29:08,952 | INFO | livekit.agents | shutting down worker
+2026-07-19 16:29:09,069 | DEBUG | livekit.agents | session closed
+2026-07-19 16:29:09,079 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 16:29:09,083 | DEBUG | livekit.agents | job exiting
+2026-07-19 16:29:09,085 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 16:37:52,220 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:37:52,220 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 16:37:52,234 | INFO | livekit.agents | starting worker
+2026-07-19 16:37:52,237 | INFO | livekit.agents | plugin registered
+2026-07-19 16:37:52,239 | INFO | livekit.agents | plugin registered
+2026-07-19 16:37:52,242 | INFO | livekit.agents | plugin registered
+2026-07-19 16:37:52,252 | INFO | livekit.agents | HTTP server listening on :57415
+2026-07-19 16:37:52,269 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 16:37:52,283 | INFO | livekit.agents | initializing job runner
+2026-07-19 16:37:52,285 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:37:52,286 | INFO | livekit.agents | job runner initialized
+2026-07-19 16:37:52,325 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 16:37:52,456 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 16:37:52,456 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 16:37:52,481 | INFO | metrics-registry | [METRICS] Metrics listeners registered.
+2026-07-19 16:37:52,491 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 16:37:52,499 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 16:37:52,500 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 16:37:53,984 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 16:37:54,041 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 16:37:58,455 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.650s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:02,332 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.900s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:07,225 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.900s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:11,322 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:14,525 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:19,521 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:23,919 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:28,027 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:31,337 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.300s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:33,612 | INFO | livekit.agents | shutting down worker
+2026-07-19 16:38:35,045 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.700s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:38,443 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:41,529 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:45,564 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:38:48,613 | WARNING | livekit.agents | entrypoint did not exit in time, cancelling
+2026-07-19 16:38:48,736 | DEBUG | livekit.agents | session closed
+2026-07-19 16:38:48,743 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 16:38:48,745 | DEBUG | livekit.agents | job exiting
+2026-07-19 16:38:48,747 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx
+2026-07-19 16:39:16,047 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:39:16,063 | DEBUG | livekit.agents | no system trust store found, setting SSL_CERT_FILE to the certifi bundle
+2026-07-19 16:39:16,065 | INFO | livekit.agents | starting worker
+2026-07-19 16:39:16,065 | INFO | livekit.agents | plugin registered
+2026-07-19 16:39:16,065 | INFO | livekit.agents | plugin registered
+2026-07-19 16:39:16,070 | INFO | livekit.agents | plugin registered
+2026-07-19 16:39:16,076 | INFO | livekit.agents | HTTP server listening on :57437
+2026-07-19 16:39:16,091 | WARNING | livekit.agents | no warmed process available for job, waiting for one to be created
+2026-07-19 16:39:16,104 | INFO | livekit.agents | initializing job runner
+2026-07-19 16:39:16,106 | DEBUG | asyncio | Using proactor: IocpProactor
+2026-07-19 16:39:16,106 | INFO | livekit.agents | job runner initialized
+2026-07-19 16:39:16,147 | INFO | voice-web-search-agent | Starting voice session for room: console
+2026-07-19 16:39:16,282 | INFO | livekit.agents | adaptive interruption detector initialized
+2026-07-19 16:39:16,292 | DEBUG | livekit.agents | http_session(): creating a new httpclient ctx
+2026-07-19 16:39:16,298 | INFO | metrics-registry | [METRICS] Metrics listeners registered.
+2026-07-19 16:39:16,313 | DEBUG | livekit.agents | using audio io: `Console` -> `AgentSession` -> `TranscriptSynchronizer` -> `AudioSinkProxy` -> `Console`
+2026-07-19 16:39:16,319 | DEBUG | livekit.agents | using transcript io: `AgentSession` -> `TranscriptSynchronizer`
+2026-07-19 16:39:16,319 | INFO | voice-web-search-agent | Voice web-search session started successfully.
+2026-07-19 16:39:17,864 | DEBUG | livekit.agents | adaptive interruption session created
+2026-07-19 16:39:17,929 | DEBUG | livekit.agents | audio turn detector initialized
+2026-07-19 16:39:19,624 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=540 | completion_tokens=76 | total_tokens=616 | tokens_per_second=23.08 | ttft=2.627s | duration=3.293s | cancelled=False
+2026-07-19 16:39:19,719 | DEBUG | livekit.agents | aec warmup active, disabling interruptions for 2.00s
+2026-07-19 16:39:21,719 | DEBUG | livekit.agents | aec warmup expired, re-enabling interruptions
+2026-07-19 16:39:21,989 | INFO | agent-metrics | [TTS METRICS] ttfb=0.306s | duration=2.658s | audio_duration=10.710s | characters=146 | streamed=True | cancelled=False
+2026-07-19 16:39:22,374 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.750s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:22,865 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=0.500s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:23,173 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=0.300s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:27,969 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.800s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:30,423 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:39:32,071 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:32,817 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=0.700s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:34,816 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=2.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:34,823 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:39:36,876 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=2.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:36,881 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:39:36,968 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:39:36,971 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:39:36,976 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:39:36,982 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:39:36,986 | INFO | agent-metrics | [EOU METRICS] transcription_delay=0.517s | end_of_turn_delay=0.602s
+2026-07-19 16:39:39,046 | DEBUG | livekit.agents | executing tool
+2026-07-19 16:39:39,050 | INFO | research-agent | [TOOL CALL] search_web(query=معالجة اللغات الطبيعية NLP معلومات حديثة)
+2026-07-19 16:39:39,058 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=562 | completion_tokens=141 | total_tokens=703 | tokens_per_second=65.01 | ttft=2.158s | duration=2.169s | cancelled=False
+2026-07-19 16:39:41,423 | INFO | research-agent | [TOOL RESULT] Returned 3 search results.
+2026-07-19 16:39:41,428 | DEBUG | livekit.agents | tools execution completed
+2026-07-19 16:39:41,918 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:45,165 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=1297 | completion_tokens=401 | total_tokens=1698 | tokens_per_second=107.46 | ttft=1.128s | duration=3.731s | cancelled=False
+2026-07-19 16:39:45,913 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:49,281 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:53,689 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:39:57,876 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:01,674 | INFO | agent-metrics | [TTS METRICS] ttfb=0.306s | duration=18.868s | audio_duration=80.677s | characters=1226 | streamed=True | cancelled=False
+2026-07-19 16:40:02,516 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:07,423 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.900s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:10,970 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:14,980 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:19,982 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:24,367 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:28,122 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.700s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:31,973 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.900s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:35,073 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:39,683 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:44,385 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.700s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:47,532 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:51,874 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:55,465 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:40:59,166 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.700s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:03,572 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:03,921 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:41:06,578 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:09,714 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:13,282 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:16,430 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:16,442 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:41:16,574 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=0.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:16,581 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:41:16,653 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:41:16,658 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:41:16,665 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:41:16,672 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:41:16,677 | INFO | agent-metrics | [EOU METRICS] transcription_delay=0.513s | end_of_turn_delay=0.586s
+2026-07-19 16:41:19,942 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=1688 | completion_tokens=278 | total_tokens=1966 | tokens_per_second=82.86 | ttft=1.160s | duration=3.355s | cancelled=False
+2026-07-19 16:41:21,492 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.900s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:25,873 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:30,873 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:31,370 | INFO | agent-metrics | [TTS METRICS] ttfb=0.304s | duration=13.286s | audio_duration=58.897s | characters=853 | streamed=True | cancelled=False
+2026-07-19 16:41:34,888 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:37,980 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:42,817 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.800s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:46,280 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.500s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:49,682 | DEBUG | livekit.agents | interruption detected
+2026-07-19 16:41:50,775 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.500s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:50,975 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=0.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:50,985 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:41:51,000 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:41:51,583 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=0.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:51,587 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:41:51,756 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:41:51,764 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:41:51,774 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:41:51,782 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:41:51,786 | INFO | agent-metrics | [EOU METRICS] transcription_delay=0.415s | end_of_turn_delay=0.588s
+2026-07-19 16:41:55,337 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=1852 | completion_tokens=448 | total_tokens=2300 | tokens_per_second=119.63 | ttft=3.681s | duration=3.745s | cancelled=False
+2026-07-19 16:41:56,400 | INFO | agent-metrics | [TTS METRICS] ttfb=0.304s | duration=1.058s | audio_duration=3.709s | characters=38 | streamed=True | cancelled=False
+2026-07-19 16:41:56,581 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:41:59,421 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:01,062 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.500s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:03,173 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=2.100s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:03,179 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:42:03,193 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:42:03,196 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:42:03,202 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:42:03,206 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:03,208 | INFO | agent-metrics | [EOU METRICS] transcription_delay=0.700s | end_of_turn_delay=0.710s
+2026-07-19 16:42:04,240 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=1881 | completion_tokens=56 | total_tokens=1937 | tokens_per_second=53.25 | ttft=0.915s | duration=1.052s | cancelled=False
+2026-07-19 16:42:05,400 | INFO | agent-metrics | [TTS METRICS] ttfb=0.315s | duration=1.146s | audio_duration=4.127s | characters=43 | streamed=True | cancelled=False
+2026-07-19 16:42:08,176 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:08,728 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:13,164 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:14,374 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=1.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:14,381 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:42:14,446 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:42:14,451 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:42:14,455 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:42:14,461 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:14,463 | INFO | agent-metrics | [EOU METRICS] transcription_delay=0.597s | end_of_turn_delay=0.661s
+2026-07-19 16:42:17,942 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=1916 | completion_tokens=353 | total_tokens=2269 | tokens_per_second=99.39 | ttft=3.331s | duration=3.552s | cancelled=False
+2026-07-19 16:42:19,417 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:19,881 | INFO | agent-metrics | [TTS METRICS] ttfb=0.310s | duration=2.123s | audio_duration=8.533s | characters=138 | streamed=True | cancelled=False
+2026-07-19 16:42:22,366 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:26,620 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:26,769 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:31,364 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=4.600s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:32,575 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=1.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:32,580 | DEBUG | livekit.agents | received user transcript
+2026-07-19 16:42:32,591 | DEBUG | livekit.agents | eot prediction
+2026-07-19 16:42:32,595 | DEBUG | livekit.agents | user turn committed
+2026-07-19 16:42:32,598 | DEBUG | livekit.agents | using preemptive generation
+2026-07-19 16:42:32,605 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:32,607 | INFO | agent-metrics | [EOU METRICS] transcription_delay=0.703s | end_of_turn_delay=0.716s
+2026-07-19 16:42:37,571 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=5.000s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:40,233 | INFO | agent-metrics | [LLM METRICS] prompt_tokens=1973 | completion_tokens=558 | total_tokens=2531 | tokens_per_second=72.95 | ttft=5.863s | duration=7.649s | cancelled=False
+2026-07-19 16:42:40,978 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.400s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:41,631 | INFO | agent-metrics | [TTS METRICS] ttfb=0.310s | duration=1.383s | audio_duration=5.242s | characters=41 | streamed=True | cancelled=False
+2026-07-19 16:42:44,469 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.500s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:45,822 | DEBUG | livekit.agents | conversation_item_added
+2026-07-19 16:42:48,293 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.800s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:51,485 | INFO | agent-metrics | [STT METRICS] duration=0.000s | audio_duration=3.200s | real_time_factor=0.000 | streamed=True
+2026-07-19 16:42:52,348 | INFO | livekit.agents | shutting down worker
+2026-07-19 16:42:52,473 | DEBUG | livekit.agents | session closed
+2026-07-19 16:42:52,479 | DEBUG | livekit.agents | shutting down job task
+2026-07-19 16:42:52,483 | DEBUG | livekit.agents | job exiting
+2026-07-19 16:42:52,487 | DEBUG | livekit.agents | http_session(): closing the httpclient ctx

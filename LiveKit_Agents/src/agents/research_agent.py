@@ -1,23 +1,30 @@
 import logging
+from typing import Any
 
 from livekit.agents import (
     Agent,
     RunContext,
     function_tool,
 )
-from livekit.agents.llm import ToolError
+from livekit.agents.llm import (
+    ToolError,
+)
 
 from ..tools.web_search_tool import (
     WebSearchError,
     WebSearchService,
 )
 
+from ..metrics.registry import register_metrics
 
 logger = logging.getLogger("research-agent")
 
 
 AGENT_INSTRUCTIONS = """
 You are Lina, a concise voice research assistant.
+
+Communicate with the user in Egyptian Arabic unless they
+explicitly request another language.
 
 Use the search_web tool whenever the user asks about:
 - Current events
@@ -56,6 +63,11 @@ class ResearchAgent(Agent):
 
         self._web_search_service = web_search_service
 
+    async def on_enter(self) -> None:
+        register_metrics(
+            self.session
+        )
+
     @function_tool()
     async def search_web(
         self,
@@ -64,9 +76,9 @@ class ResearchAgent(Agent):
     ) -> str:
         """Search the live web for current information.
 
-        Use this tool for recent news, prices, technology updates,
-        current people, companies, products, events, or any
-        information that may have changed.
+        Use this tool for recent news, prices, technology
+        updates, current people, companies, products, events,
+        or any information that may have changed.
 
         Args:
             query: A concise web search query describing the
@@ -82,8 +94,10 @@ class ResearchAgent(Agent):
         )
 
         try:
-            results = await self._web_search_service.search(
-                normalized_query
+            results = (
+                await self._web_search_service.search(
+                    normalized_query
+                )
             )
 
         except ValueError as error:
@@ -94,29 +108,32 @@ class ResearchAgent(Agent):
 
             raise ToolError(
                 "The search query is invalid. "
-                "Ask the user to provide a clearer search request."
+                "Ask the user to provide a clearer "
+                "search request."
             ) from error
 
         except WebSearchError as error:
             logger.exception(
-                "[TOOL ERROR] Web search failed for query: %s",
+                "[TOOL ERROR] Web search failed "
+                "for query: %s",
                 normalized_query,
             )
 
             raise ToolError(
-                "The live web search service is temporarily unavailable. "
-                "Tell the user that the search could not be completed "
-                "and ask them to try again later. "
-                "Do not answer the original question from memory. "
-                "Do not guess or invent search results."
+                "The live web search service is temporarily "
+                "unavailable. Tell the user that the search "
+                "could not be completed and ask them to try "
+                "again later. Do not answer the original "
+                "question from memory. Do not guess or "
+                "invent search results."
             ) from error
 
         if not results:
             raise ToolError(
                 "No reliable web search results were found. "
-                "Tell the user that no relevant results were available "
-                "and ask them to rephrase the question. "
-                "Do not guess or invent an answer."
+                "Tell the user that no relevant results were "
+                "available and ask them to rephrase the "
+                "question. Do not guess or invent an answer."
             )
 
         formatted_results: list[str] = []
@@ -125,9 +142,20 @@ class ResearchAgent(Agent):
             results,
             start=1,
         ):
-            title = result.get("title", "Untitled result")
-            content = result.get("content", "").strip()
-            url = result.get("url", "")
+            title = result.get(
+                "title",
+                "Untitled result",
+            )
+
+            content = result.get(
+                "content",
+                "",
+            ).strip()
+
+            url = result.get(
+                "url",
+                "",
+            )
 
             if len(content) > 700:
                 content = f"{content[:700]}..."

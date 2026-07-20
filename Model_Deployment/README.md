@@ -81,7 +81,7 @@ locust -f locustfile.py --host=http://127.0.0.1:8000
 Open the Locust web UI (default `http://127.0.0.1:8089`) to start a test. Save or paste the Locust screenshot to `docs/locust_stats.png` so it appears in this README (the image above).
 
 
-## Write-up — Serving 50 concurrent users in production
+## Serving 50 concurrent users in production
 
 To support roughly 50 concurrent users in production, the architecture and operational model should be hardened for reliability, latency, and cost. Key additions:
 
